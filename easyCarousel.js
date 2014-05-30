@@ -6,8 +6,8 @@
     $.fn.easyCarousel = function( params ) {
 
         var crConfig = $.extend({
-            height: 300,
-            width: 1000,
+            height: 250,
+            width: 600,
             current: 0
         }, params);
 
@@ -20,8 +20,10 @@
 
         $items.each(function(index, value) {
             $(this).css({'text-align': 'center', 'float': 'left'});
+            var $childImage = $(this).find('img');
+            $childImage.attr('width', crConfig.width);
+            $childImage.attr('height', crConfig.height);
             totalWidth += $(this).outerWidth();
-
             if(index == crConfig.current) {
                 dotsNav += '<li class="navigation-dot" style="background: none repeat scroll 0 0 #00FA9A;border-radius: 8px;float: left;height: 8px;opacity: 0.5;width: 8px;border: 4px solid #000000;cursor: pointer;margin: 3px;" id="easyCarouselDotNav-' + index + '"></li>';
             } else {
@@ -152,7 +154,7 @@
             }, 5000);
         };
 
-        autoStartSliding();
+        //autoStartSliding();
 
 
     }
