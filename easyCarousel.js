@@ -8,7 +8,9 @@
         var crConfig = $.extend({
             height: 250,
             width: 600,
-            current: 0
+            current: 0,
+            autoScroll: true,
+            photoFrame: true
         }, params);
 
         var $cr = $(this);
@@ -16,13 +18,28 @@
 
         var totalWidth = 0;
 
-        var dotsNav = '<ul class="dot-navigation-ul" style="position: absolute;top: 86%;right:0; list-style: none outside none;">';
+        var dotsNav = '<ul class="dot-navigation-ul" style="position: absolute;bottom: 10px;right:10px; margin:0; padding: 0;list-style: none outside none;">';
 
         $items.each(function(index, value) {
             $(this).css({'text-align': 'center', 'float': 'left'});
             var $childImage = $(this).find('img');
-            $childImage.attr('width', crConfig.width);
-            $childImage.attr('height', crConfig.height);
+
+
+            if(crConfig.photoFrame) {
+                $childImage.css({
+                    'background-color': '#F3F3F3',
+                    'border': '1px solid #DDDDDD',
+                    'border-radius': '3px',
+                    'padding': '5px'
+                });
+
+                $childImage.attr('width', crConfig.width - 12);
+                $childImage.attr('height', crConfig.height - 12);
+            } else {
+                $childImage.attr('width', crConfig.width);
+                $childImage.attr('height', crConfig.height);
+            }
+
             totalWidth += $(this).outerWidth();
             if(index == crConfig.current) {
                 dotsNav += '<li class="navigation-dot" style="background: none repeat scroll 0 0 #00FA9A;border-radius: 8px;float: left;height: 8px;opacity: 0.5;width: 8px;border: 4px solid #000000;cursor: pointer;margin: 3px;" id="easyCarouselDotNav-' + index + '"></li>';
@@ -33,20 +50,16 @@
 
         dotsNav += '</ul>';
 
-
-        $cr.css('width', totalWidth);
-
-
         var $wrapper = $('<div class="cr-wrapper">')
             .css({
-                'height': crConfig.height,
+                //'height': crConfig.height,
                 'width': crConfig.width,
                 'overflow': 'hidden',
                 'float': 'left',
                 'position': 'relative'
             });
         $cr.wrap($wrapper);
-        $cr.css({'position': 'relative', 'left': -$($items[crConfig.current]).position().left});
+        $cr.css({'width': totalWidth, 'list-style': 'none outside none', 'margin': 0, 'padding':0, 'position': 'relative'});
 
         var $prev = $('<div>')
             .html('&lt;')
@@ -85,10 +98,6 @@
         var $controls = $('<div>').addClass('carousel-controls').append($prev).append($next).append($(dotsNav));
         $cr.after($controls);
 
-
-
-
-
         var slidePrevious = function() {
             $(".navigation-dot").css('background', 'none repeat scroll 0 0 #FFFFFF');
             var nextIndex;
@@ -126,20 +135,26 @@
             $wrapper.css('width', $($items[i]).outerWidth());
             $("#easyCarouselDotNav-"+i).css('background', 'none repeat scroll 0 0 #00FA9A');
             crConfig.current = i;
-            clearInterval(crConfig.interval);
-            autoStartSliding();
+            if(crConfig.autoScroll) {
+                clearInterval(crConfig.interval);
+                autoStartSliding();
+            }
         };
 
         $prev.on('click', function(event) {
             slidePrevious();
-            clearInterval(crConfig.interval);
-            autoStartSliding();
+            if(crConfig.autoScroll) {
+                clearInterval(crConfig.interval);
+                autoStartSliding();
+            }
         });
 
         $next.on('click', function(event) {
             slideNext();
-            clearInterval(crConfig.interval);
-            autoStartSliding();
+            if(crConfig.autoScroll) {
+                clearInterval(crConfig.interval);
+                autoStartSliding();
+            }
         });
 
         $(".navigation-dot").on('click', function() {
@@ -154,8 +169,8 @@
             }, 5000);
         };
 
-        //autoStartSliding();
-
-
+        if(crConfig.autoScroll) {
+            autoStartSliding();
+        }
     }
 })(jQuery);
