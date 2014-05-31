@@ -11,8 +11,6 @@ easyCarousel running Demo
 Usage
 =====
 
-easyCarousel is easy to use. Just include the <code>easyCarousel.js</code> file in your script tag and use the simple syntax.
+easyCarousel is easy to use. Just include the <code>easyCarousel.js</code> file in your `<script>` tag and use the simple syntax.
 
-<pre>
-<code><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.6/slick.css"/> </code>
-</pre>
+`<script type="text/javascript" src="easyCarousel.js"></script>`
