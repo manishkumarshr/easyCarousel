@@ -25,10 +25,10 @@ Initiate the plugin simple as this:
 ```javascript
 $(document).ready(function() {
     $("#myUlElement").easyCarousel({
-        height: 300,        // height of the scrolling area
-        width: 650,         // width of scrolling area
-        autoScroll: false,  // do you want to start the scrolling by itself
-        photoFrame: true    // add a frame to your photos used in slider
+        height: 300,        // height of the scrolling area, default is 250px
+        width: 650,         // width of scrolling area, default is 600px
+        autoScroll: true,  // do you want to start the scrolling by itself, default is true
+        photoFrame: true    // add a frame to your photos used in slider, default is true
     });
 });
 ```
