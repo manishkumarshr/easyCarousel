@@ -85,5 +85,9 @@ Here is a complete code example to use easyCarousel.
 </html>
 ```
 
+License
+=======
+Copyright (c) 2014 [Manish Kumar](http://www.manishable.com)
 
+Licensed under the MIT license.
 
