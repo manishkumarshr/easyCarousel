@@ -27,7 +27,7 @@ $(document).ready(function() {
     $("#myUlElement").easyCarousel({
         height: 300,        // height of the scrolling area, default is 250px
         width: 650,         // width of scrolling area, default is 600px
-        autoScroll: true,  // do you want to start the scrolling by itself, default is true
+        autoScroll: true,   // do you want to start the scrolling by itself, default is true
         photoFrame: true    // add a frame to your photos used in slider, default is true
     });
 });
@@ -60,7 +60,7 @@ Here is a complete code example to use easyCarousel.
     <meta charset="UTF-8">
     <title>Easy Carousel</title>
     <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="/easyCarousel.js"></script>
+    <script type="text/javascript" src="easyCarousel.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $("#myC").easyCarousel({
