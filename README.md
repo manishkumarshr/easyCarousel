@@ -6,5 +6,13 @@ A simple jQuery carousel. A jQuery image slider plugin, you can use anywhere in 
 easyCarousel running Demo
 ============
 
+*[DEMO](http://www.findnetspeed.com/demo.html)*
 
-<a href="http://www.findnetspeed.com/demo.html">Demo</a>
+Usage
+=====
+
+easyCarousel is easy to use. Just include the <code>easyCarousel.js</code> file in your script tag and use the simple syntax.
+
+<code>
+  <script type="text/javascript" src="../easyCarousel.js"></script>
+</code>
