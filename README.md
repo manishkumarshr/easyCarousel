@@ -20,15 +20,20 @@ easyCarousel is easy to use. Just include the <code>easyCarousel.js</code> file 
 
 `<script type="text/javascript" src="easyCarousel.js"></script>`
 
+OR
+
+`<script type="text/javascript" src="easyCarousel-min.js"></script>`
+
 Initiate the plugin simple as this:
 
 ```javascript
 $(document).ready(function() {
     $("#myUlElement").easyCarousel({
-        height: 300,        // height of the scrolling area, default is 250px
-        width: 650,         // width of scrolling area, default is 600px
-        autoScroll: true,   // do you want to start the scrolling by itself, default is true
-        photoFrame: true    // add a frame to your photos used in slider, default is true
+        height: 400,            // height of the scrolling area, default is 250px
+        width: 650,             // width of scrolling area, default is 600px
+        autoScroll: true,       // do you want to start the scrolling by itself, default is true
+		slideDuration: 3000,    // time interval of photo slide, default is 4 second (4000)
+        photoFrame: true        // add a frame to your photos used in slider, default is true
     });
 });
 ```
@@ -64,10 +69,11 @@ Here is a complete code example to use easyCarousel.
     <script type="text/javascript">
         $(document).ready(function() {
             $("#myC").easyCarousel({
-                height: 300,
-                width: 650,
-                autoScroll: true,
-                photoFrame: true
+                height: 400,            // height of the scrolling area, default is 250px
+                width: 650,             // width of scrolling area, default is 600px
+                autoScroll: true,       // do you want to start the scrolling by itself, default is true
+				slideDuration: 3000,    // time interval of photo slide, default is 4 second (4000)
+                photoFrame: true        // add a frame to your photos used in slider, default is true
             });
         });
     </script>
