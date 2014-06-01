@@ -6,7 +6,7 @@ A simple jQuery carousel. A jQuery image slider plugin, you can use anywhere in 
 easyCarousel running Demo
 ============
 
-*[DEMO](http://www.findnetspeed.com/demo.html)*
+*[DEMO](http://www.findnetspeed.com/jQuery-carousel-easyCarousel.html)*
 
 Dependencies
 ============
