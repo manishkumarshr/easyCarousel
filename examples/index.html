@@ -2,31 +2,49 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Easy Carousel</title>
+    <title>Easy Carousel: jQuery carousel, an easy and simple jQuery image slider, easyCarousel.</title>
     <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="../easyCarousel.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $("#myC").easyCarousel({
-                height: 300,
+                height: 400,
                 width: 650,
-                autoScroll: false,
+                autoScroll: true,
+				slideDuration: 3000,
                 photoFrame: true
             });
         });
     </script>
+
+    <style>
+        body {
+            background-color: #E3E9DC;
+            color: #878E83;
+            font-family: 'Ubuntu Condensed',sans-serif;
+            font-size: 13.5pt;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        #main {
+            width:650px;
+            margin:0 auto;
+        }
+    </style>
+
 </head>
 <body>
-    <div>
-        <ul id="myC">
-            <li><img src="images/pic1.jpg"></li>
-            <li><img src="images/pic2.jpg"></li>
-            <li><img src="images/pic3.jpg"></li>
-            <li><img src="images/pic4.jpg"></li>
-            <li><img src="images/pic5.jpg"></li>
-            <li><img src="images/pic6.jpg"></li>
-        </ul>
-    </div>
+<div id="main">
+    <ul id="myC">
+        <li><img src="images/pic1.jpg"></li>
+        <li><img src="images/pic2.jpg"></li>
+        <li><img src="images/pic3.jpg"></li>
+        <li><img src="images/pic4.jpg"></li>
+        <li><img src="images/pic5.jpg"></li>
+        <li><img src="images/pic6.jpg"></li>
+    </ul>
+</div>
 
 
 </body>

@@ -1,7 +1,3 @@
-/**
- * Created by manishk on 5/29/2014.
- */
-
 (function($){
     $.fn.easyCarousel = function( params ) {
 
@@ -10,8 +6,11 @@
             width: 600,
             current: 0,
             autoScroll: true,
+            slideDuration: 4000,
             photoFrame: true
         }, params);
+
+        crConfig.slideDuration = (crConfig.slideDuration < 1000) ? 1000 : crConfig.slideDuration;
 
         var $cr = $(this);
         var $items = $(this).children('li');
@@ -166,7 +165,7 @@
         var autoStartSliding = function() {
             crConfig.interval = setInterval(function() {
                 slideNext();
-            }, 5000);
+            }, crConfig.slideDuration);
         };
 
         if(crConfig.autoScroll) {
