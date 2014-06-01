@@ -8,9 +8,10 @@
         "banner",
         "slider"
     ],
-    "version": "1.0.3",
+    "version": "1.0.4",
     "author": {
         "name": "Manish Kumar",
+        "email": "manishkumarshr@gmail.com",
         "url": "http://www.manishable.com"
     },
     "maintainers": [
@@ -30,7 +31,7 @@
     "homepage": "https://github.com/manishkumarshr/easyCarousel",
     "docs": "https://github.com/manishkumarshr/easyCarousel",
     "demo": "http://www.findnetspeed.com/jQuery-carousel-easyCarousel.html",
-    "download": "https://github.com/manishkumarshr/easyCarousel",
+    "download": "https://github.com/manishkumarshr/easyCarousel/archive/master.zip",
     "dependencies": {
         "jquery": ">=1.5"
     }
