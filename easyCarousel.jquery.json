@@ -8,7 +8,7 @@
         "banner",
         "slider"
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": {
         "name": "Manish Kumar",
         "url": ""
@@ -29,6 +29,7 @@
     "bugs": "https://github.com/manishkumarshr/easyCarousel/issues",
     "homepage": "https://github.com/manishkumarshr/easyCarousel",
     "docs": "https://github.com/manishkumarshr/easyCarousel",
+    "demo": "http://www.findnetspeed.com/jQuery-carousel-easyCarousel.html",
     "download": "https://github.com/manishkumarshr/easyCarousel",
     "dependencies": {
         "jquery": ">=1.5"
